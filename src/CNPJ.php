@@ -16,6 +16,11 @@ class CNPJ
             return false;
         }
 
+        // Verifica se foi informada uma sequência de digitos repetidos. Ex: 11.111.111/1111-11
+        if (preg_match('/(\d)\1{13}/', $value)) {
+            return false;
+        }        
+
         // Criar Matriz de 14 posicoes
         $matriz = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // 14 numeros
         for ($i = 1; $i <= 14; $i++) {
