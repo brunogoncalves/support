@@ -1,0 +1,30 @@
+{
+    "name"       : "brunogoncalves/support",
+    "description": "PHP Support Utils",
+    "keywords"   : ["php", "support", "utils"],
+    "license"    : "MIT",
+    "type"       : "project",
+
+    "authors"     : [
+        {
+            "name" : "Bruno Gonçalves",
+            "email": "bugotech@gmail.com"
+        }
+    ],
+
+    "require"    : {
+        "php" : ">=5.0.0"
+    },
+
+    "autoload": {
+        "psr-4"   : {
+            "Support\\" : "src/"
+        }
+    },
+
+    "config": {
+        "preferred-install"  : "dist",
+        "sort-packages"      : true,
+        "optimize-autoloader": true
+    }
+}
