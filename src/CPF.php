@@ -16,6 +16,11 @@ class CPF
             return false;
         }
 
+        // Verifica se foi informada uma sequência de digitos repetidos. Ex: 111.111.111-11
+        if (preg_match('/(\d)\1{10}/', $value)) {
+            return false;
+        }        
+
         // Checar 1o digito
         if (Modulo::digi11($value, 9) != $value[9]) {
             return false;
